@@ -1,0 +1,8 @@
+1. Реализовать методы в MyLinkedList, которые не успели в классе.
+pushToTail(int data),
+pushToIndex(int index, int data)
+removeLast(),
+remove(int index)
+get(int index)
+
+2.* Переделать односвязный список в двусвязный
