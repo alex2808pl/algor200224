@@ -37,6 +37,12 @@ public class MainList {
         list.pushToIndex(4, 55);
         list.print();
 
+        //удаление ао индексу
+        list.remove(1);
+        list.print();
+
+        // возврат значения по индексу
+        System.out.println(list.get(2));
 
     }
 }

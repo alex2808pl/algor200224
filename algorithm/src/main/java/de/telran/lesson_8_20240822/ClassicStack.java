@@ -18,7 +18,7 @@ public class ClassicStack {
     }
 
     public boolean isEmpty() {
-        return top == -1;
+        return top == -1; // O(1)
     }
 
     public boolean isFull() {

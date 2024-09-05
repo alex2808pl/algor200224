@@ -76,6 +76,41 @@ public class MyLinkedList {
 
     }
 
+    public void remove(int index) {
+        Node current = head;
+        int jump;
+        if (index < 1) {
+            removeFirst();
+        } else {
+            jump = 0;
+            while (jump < index - 1) {
+                current = current.getNext();
+                jump++;
+            }
+            current.setNext(current.getNext().getNext());
+        }
+    }
+
+    // Получить элемент
+    public int get(int index) {
+        int jump = -1;
+        if (head == null) {
+            return -1;
+        }
+        if (index < 0 || index > size()) {
+            return -1;
+        }
+
+        Node node = head;
+        while (node != null) {
+            jump++;
+            if (jump == index) {
+                return node.getData();
+            }
+            node = node.getNext();
+        }
+        return -1;
+    }
 
     // размер списка
     public int size() {
