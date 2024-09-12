@@ -10,13 +10,13 @@ public class BinarySearch {
         System.out.println(Arrays.toString(array));
 
         // calling a method and outputting the result to the console
-        System.out.println("Index (Iteration) = "+binarySearch(array, key, 0, array.length - 1));
+        System.out.println("Index (Iteration) = "+ binarySearchIterat(array, key, 0, array.length - 1));
 
         System.out.printf("Index (Recurs) = %d%n", binarySearchRecurs(array, key, 0, array.length - 1));
 
 
     }
-    private static int binarySearch(int[] sortedArray, int valueToFind, int low, int high) {
+    private static int binarySearchIterat(int[] sortedArray, int valueToFind, int low, int high) {
         int index = -1;
         while (low <= high) {
             int mid = low + (high - low) / 2;

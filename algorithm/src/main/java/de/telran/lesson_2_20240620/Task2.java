@@ -2,10 +2,10 @@ package de.telran.lesson_2_20240620;
 
 public class Task2 {
     public static void main(String[] args) {
-        bubleFor(9);
+        doubleFor(9);
     }
 
-    static void bubleFor(int n) {
+    static void doubleFor(int n) {
         for (int i = 0; i < n/3; i++) { //const = 3 times = n/3
             for (int j = 0; j <= n; j = j + 4) { // const = 4  times = n
                 System.out.println("Hello ["+i+"] ["+j+"]"); //+1

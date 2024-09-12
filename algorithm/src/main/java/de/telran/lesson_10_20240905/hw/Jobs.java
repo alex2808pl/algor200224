@@ -2,7 +2,6 @@ package de.telran.lesson_10_20240905.hw;
 
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
@@ -19,8 +18,9 @@ public class Jobs {
 
         int maxTime = 11; //сколько времени я могу уделить
 
-        System.out.println(taskSelectionCount(tasks, maxTime));
+        System.out.println("Критерий макс количество задач = "+taskSelectionCount(tasks, maxTime));
 
+        System.out.println("Критерий макс сумма = "+taskSelectionCost(tasks, 60));
     }
 
     public static List<Task> taskSelectionCount(List<Task> tasks, int maxTime) {
@@ -30,6 +30,22 @@ public class Jobs {
          for (Task task : tasks) {
             totalTime += task.getTime();
             if (totalTime <= maxTime) {
+                res.add(task);
+            } else {
+                break;
+            }
+        }
+        return res;
+    }
+
+    // критерий жадности - максимальная сумма
+    public static List<Task> taskSelectionCost(List<Task> tasks, int maxCost) {
+        tasks.sort(Comparator.comparingInt(Task::getCost).reversed());
+        int totalCost = 0; //общее заработанная сумма
+        List<Task> res = new ArrayList<>(); //выбранные задачи
+        for (Task task : tasks) {
+            totalCost += task.getCost();
+            if (totalCost <= maxCost) {
                 res.add(task);
             } else {
                 break;
