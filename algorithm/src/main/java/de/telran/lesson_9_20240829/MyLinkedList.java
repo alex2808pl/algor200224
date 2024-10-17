@@ -1,7 +1,7 @@
 package de.telran.lesson_9_20240829;
 
 public class MyLinkedList {
-    private Node head;
+    protected Node head;
 
     // Вставки
     public void pushToHead(int data) {
