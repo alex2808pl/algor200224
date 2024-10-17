@@ -45,12 +45,12 @@ public class MyLinkedListFloyd extends MyLinkedList {
         return false;
     }
 
-    // удаление элемента (отсчет порядкового номера ведеться с конца)
-    public void removeNodeFromEnd(int idx) {
+    // удаление элемента с конца (отсчет порядкового номера ведеться с конца)
+    public void removeNodeFromEnd(int num) {
         Node slow = head;
         Node fast = head;
 
-        for (int i = 0; i < idx; i++) {
+        for (int i = 0; i < num; i++) {
             fast = fast.getNext();
         }
 

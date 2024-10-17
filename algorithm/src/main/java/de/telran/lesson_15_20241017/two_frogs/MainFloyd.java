@@ -25,18 +25,24 @@ public class MainFloyd {
         System.out.println("LoopSet = "+lists.detectLoopSet());
         System.out.println("Алгоритм Флойда = "+lists.detectLoopFloyd());
 
+        lists.print();
 
-        MyLinkedListFloyd lists2 = new MyLinkedListFloyd();
-        lists2.pushToHead(4);
-        lists2.pushToHead(3);
-        lists2.pushToHead(2);
-        lists2.pushToHead(1);
+        lists.removeNodeFromEnd(3);
 
-        lists2.print();
+        lists.print();
 
-        lists2.removeNodeFromEnd(2);
 
-        lists2.print();
+//        MyLinkedListFloyd lists2 = new MyLinkedListFloyd();
+//        lists2.pushToHead(4);
+//        lists2.pushToHead(3);
+//        lists2.pushToHead(2);
+//        lists2.pushToHead(1);
+//
+//        lists2.print();
+//
+//        lists2.removeNodeFromEnd(1);
+//
+//        lists2.print();
 
 
     }
