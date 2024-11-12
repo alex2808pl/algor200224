@@ -3,6 +3,7 @@ package de.telran.lesson_12_20240919.ht;
 public class BinaryTree {
     TreeNode root;
 
+    // проверка дерева на правильность требованиям BST
     boolean isBST(TreeNode node, int min, int max) {
         if (node == null)
             return true;
@@ -17,6 +18,7 @@ public class BinaryTree {
         return isBST(root, Integer.MIN_VALUE, Integer.MAX_VALUE);
     }
 
+    // востановление дерева согласно требованиям BST
     void recoverTree(TreeNode root) {
         TreeNode[] nodes = new TreeNode[3];
         recoverTreeHelper(root, nodes);
